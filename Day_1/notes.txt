@@ -1,0 +1,26 @@
+https://www.oracle.com/in/java/technologies/javase-jdk15-downloads.html
+
+https://www.eclipse.org/downloads/packages/release/kepler/sr2/eclipse-ide-java-ee-developers
+
+javac -d d:\ HelloWorld.java
+
+set classpath="d:\training-java\Day 1\temp";.;
+
+https://fluvid.com/videos/detail/ZEn3MTDm2XT9PpZgM#.YEcHPrgcW0A.link
+
+javap pack3.Hello3
+
+javadoc Hello3.java
+
+jar -cvf myjar.jar *
+
+https://fluvid.com/videos/detail/q_2d8S9yoXTgq3a34#.YEcdOI7j7l8.link
+
+code resuasability
+object resuability
+part whole heirarchy
+composition
+polmorphic query
+elimination of if else if
+
+fN5&uX7ZtUqw&NF
