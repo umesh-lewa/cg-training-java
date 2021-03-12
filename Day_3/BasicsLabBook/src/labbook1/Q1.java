@@ -1,4 +1,4 @@
-package labbook;
+package labbook1;
 
 public class Q1 {
 
