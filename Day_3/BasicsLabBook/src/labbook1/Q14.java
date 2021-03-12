@@ -8,11 +8,6 @@ public class Q14 {
 
 	public static void main(String args[]) {
 		
-		int arr[] = {1,2,3};
-		
-		List arrList = Arrays.asList(arr);
-		arrList.add(4);
-		
 	}
 	
 }
