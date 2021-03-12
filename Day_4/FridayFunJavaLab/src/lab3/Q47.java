@@ -3,8 +3,7 @@ package lab3;
 public class Q47 {
 	
 	
-    public static void main(String[] args) 
-    {    
+    public static void main(String[] args) {    
     	Q47 obj = new Q47();
 
         System.out.println("Sum of two numbers: "+obj.addOperation(10, 20));
