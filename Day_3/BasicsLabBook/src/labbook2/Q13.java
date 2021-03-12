@@ -8,7 +8,7 @@ public class Q13 {
 	
 	public static void main(String args[]) {
 		
-		AbstractTest obj = new AbstractTest();
+		//AbstractTest obj = new AbstractTest();
 		
 	}
 }

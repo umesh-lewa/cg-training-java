@@ -6,7 +6,7 @@ public class Q15 {
 
         int i;
         int num = 0;
-        int maxCheck = 100; // maxCheck limit till which you want to find prime numbers
+        int maxCheck = 100;
         boolean isPrime = true;
 
         String primeNumbersFound = "";
