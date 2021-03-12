@@ -1,20 +1,20 @@
 package labbook2;
 
-class A{
-	A(){
+class A1{
+	A1(){
 		System.out.println("A constructor");
 	}
 }
 
-class B{
-	B(){
+class B1{
+	B1(){
 		System.out.println("B constructor");
 	}
 }
 
-public class Q10 extends A{
+public class Q10 extends A1{
 	
-	public B obj = new B();
+	public B1 obj = new B1();
 	
 	public static void main(String[] args) {
 		

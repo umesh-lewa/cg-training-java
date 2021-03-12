@@ -25,8 +25,8 @@ public class Q3 {
 	
 		char ch = 'z';
 		int num = 999;
-		char chara = (char)num;
-		int numch = ((int)ch);
+		char charnum = (char)num;
+		int numch = (int)ch;
 
 	}
 	

@@ -33,7 +33,7 @@ public class Q13 {
 			sum += i;
 		}
 		
-		return sum / arr.length;
+		return (sum / arr.length);
 	}
 	
 }
