@@ -23,4 +23,12 @@ composition
 polmorphic query
 elimination of if else if
 
-fN5&uX7ZtUqw&NF
+strategy - paint
+prototype - clone
+singleton
+template - dominoes
+command - tv remote
+decorator - buffet
+factory - shoe factory
+visitor
+builder - computer manufactuer
