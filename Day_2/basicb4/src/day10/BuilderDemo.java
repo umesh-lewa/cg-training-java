@@ -1,5 +1,6 @@
 package day10;
 
+/*
 public class BuilderDemo {
 	public static void main(String[] args) {
 		Computer myComputer=new Computer.ComputerBuilder("i7 core processor","12gb").build();
@@ -87,3 +88,4 @@ class Computer{
 	}
 	
 }
+*/
