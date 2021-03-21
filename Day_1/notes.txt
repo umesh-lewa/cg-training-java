@@ -32,3 +32,5 @@ decorator - buffet
 factory - shoe factory
 visitor
 builder - computer manufactuer
+
+prototype - singleton - decorator
