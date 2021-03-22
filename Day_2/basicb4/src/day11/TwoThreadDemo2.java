@@ -35,17 +35,21 @@ class ReservationCounter{
 	int amt;
 	
 	public void bookTicket(int amount) {
+		
 		this.amt=amount;
 		Thread t=Thread.currentThread();
 		String name=t.getName();
 		System.out.println("Ticket booked for...:"+name+"....amt is...:"+this.amt);
 		//System.out.println("Amount brought by "+name+" is..: "+amt);
+		
 	}
 	
 	public void giveChange() {
+		
 		Thread t=Thread.currentThread();
 		String name=t.getName();
 		System.out.println("Change being given to.....:"+name+" and the amount is..."+(amt-100));
+		
 	}
 	
 }
