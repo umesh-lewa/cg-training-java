@@ -10,7 +10,9 @@ public class ThreadDemo {
 		Thread t = new Thread();
 		
 		ExecutorService es = Executors.newFixedThreadPool(1);
+		
 		es.execute(new MyThreadWork());
+		
 		es.shutdown();
 		
 	}
