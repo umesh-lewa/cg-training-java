@@ -8,6 +8,7 @@ public class DeadlockDemo {
 	public static void main(String[] args) {
 		
 		Crane crane=new Crane();
+	
 		Frog frog=new Frog();
 		
 		ExecutorService es=Executors.newFixedThreadPool(2);
@@ -27,20 +28,26 @@ public class DeadlockDemo {
 class Crane{
 	
 	synchronized public void eat(Frog frog) {
+		
 		System.out.println();
 		frog.leaveCrane();
+		
 	}
 	
 	synchronized public void spitFrog() {
 		
 	}
+	
 }
 
 class Frog{
 	
 	synchronized public void escape(Crane c) {
+		
 		c.spitFrog();
+		
 	}
+	
 	synchronized public void leaveCrane() {
 		
 	}
