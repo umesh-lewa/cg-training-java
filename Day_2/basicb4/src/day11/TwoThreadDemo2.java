@@ -9,8 +9,9 @@ public class TwoThreadDemo2 {
 	
 	public static void main(String[] args) {
 		
-		ExecutorService es=Executors.newFixedThreadPool(2);
 		ReservationCounter central=new ReservationCounter();
+		
+		ExecutorService es=Executors.newFixedThreadPool(2);
 		
 		es.execute(()->{
 			Thread.currentThread().setName("ramu");
