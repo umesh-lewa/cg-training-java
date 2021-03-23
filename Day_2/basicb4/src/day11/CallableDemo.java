@@ -18,6 +18,7 @@ public class CallableDemo {
 		System.out.println(s);
 		
 		System.out.println("main thread....");
+		
 		es.shutdown();
 	}
 	
@@ -28,7 +29,12 @@ class MyCallable implements Callable{
 	@Override
 	public Object call() throws Exception {
 		// TODO Auto-generated method stub
-		try {Thread.sleep(2000);}catch(Exception e) {}
+		try {
+			Thread.sleep(2000);
+		}catch(Exception e) {
+			
+		}
+		
 		return "hello world";
 	}
 	
