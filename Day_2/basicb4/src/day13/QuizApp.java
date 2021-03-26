@@ -74,7 +74,7 @@ public static void main(String args[]) {
 				System.out.println("Moving on to the next question");
 			}
 			
-		}	
+		}
 		
 	}
 
