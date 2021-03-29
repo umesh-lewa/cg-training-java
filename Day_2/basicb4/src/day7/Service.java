@@ -1,7 +1,9 @@
 package day7;
 
 public class Service {
+	
 	public static void main(String[] args) {
+		
 		Corporation corp=new Corporation();
 		Health health=new Health();
 		PWD pwd=new PWD();
@@ -18,9 +20,12 @@ public class Service {
 		
 	}
 }
+
 class SewaCenter{
+	
 	Sewa sewaRequests[]=new Sewa[5];
 	int count = 0;
+	
 	public SewaCenter() {
 		/*
 		for(int i=0;i<5;i++) {
@@ -45,13 +50,16 @@ class SewaCenter{
 }
 
 class DummySewa extends Sewa{
+	
 	@Override
 	public void execute() {
 		System.out.println("I am dummy yet to be operational...");
 	}
+	
 }
 
 abstract class Sewa{
+	
 	public Sewa() {
 
 	}
@@ -76,7 +84,9 @@ abstract class Sewa{
 
 	public abstract void execute();
 }
+
 class DeathCertificateRequest extends Sewa{
+	
 	public DeathCertificateRequest(Corporation corp, Health health,PWD pwd) {
 		super(corp,health,pwd);
 	}
@@ -86,8 +96,11 @@ class DeathCertificateRequest extends Sewa{
 		getHealth().getDeathCertificate();
 
 	}
+	
 }
+
 class WaterConnectionRequest extends Sewa{
+	
 	public WaterConnectionRequest(Corporation corp, Health health,PWD pwd) {
 		super(corp,health,pwd);
 	}
@@ -97,32 +110,40 @@ class WaterConnectionRequest extends Sewa{
 		getCorp().getWaterConnection();;
 
 	}
+	
 }
 
 class Corporation{
+	
 	public void getWaterConnection() {
 		System.out.println("water conn");
 	}
 	public void getElectricityConnection() {
 		System.out.println("electricity conn");
 	}
+	
 }
 
 class Health{
+	
 	public void getDeathCertificate() {
 		System.out.println("death certificate");
 	}
 	public void getVaccine() {
 		System.out.println("vaccine");
 	}
+	
 }
+
 class PWD{
+	
 	public void layRoad() {
 		System.out.println("laying roads");
 	}
 	public void fixStreetLight() {
 		System.out.println("fixing lights");
 	}
+	
 }
 
 
