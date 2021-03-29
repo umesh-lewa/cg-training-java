@@ -9,6 +9,7 @@ public class TemplateMethodDemo {
 		
 	}
 }
+
 abstract class Dominos{
 	
 	final public void processToCook() {//template methods - parts
