@@ -1,8 +1,10 @@
 package day10;
 
-/*
+
 public class BuilderDemo {
+	
 	public static void main(String[] args) {
+		
 		Computer myComputer=new Computer.ComputerBuilder("i7 core processor","12gb").build();
 		
 		System.out.println(myComputer);
@@ -13,10 +15,12 @@ public class BuilderDemo {
 		System.out.println(myCom2);
 	}
 }
+
 class Computer{
 	//fixed properties
 	private String motherBoard;
 	private String ram;
+	
 	public String getMotherBoard() {
 		return motherBoard;
 	}
@@ -29,6 +33,11 @@ class Computer{
 	public void setRam(String ram) {
 		this.ram = ram;
 	}
+	
+	//optional Properties
+	private String graphicsCard;
+	private String hdd;
+		
 	public String getGraphicsCard() {
 		return graphicsCard;
 	}
@@ -41,21 +50,21 @@ class Computer{
 	public void setHdd(String hdd) {
 		this.hdd = hdd;
 	}
-	//optional Properties
-	private String graphicsCard;
-	private String hdd;
+	
 	
 	@Override
 	public String toString() {
 		return "Computer [motherBoard=" + motherBoard + ", ram=" + ram + ", graphicsCard=" + graphicsCard + ", hdd="
 				+ hdd + "]";
 	}
+	
 	public Computer(ComputerBuilder builder) {
 		this.motherBoard=builder.motherBoard;
 		this.ram=builder.ram;
 		this.graphicsCard=builder.getGraphicsCard();
 		this.hdd=builder.getHdd();
 	}
+	
 	public static class ComputerBuilder{
 		//fixed properties
 		private String motherBoard;
@@ -87,5 +96,5 @@ class Computer{
 		}
 	}
 	
+	
 }
-*/
