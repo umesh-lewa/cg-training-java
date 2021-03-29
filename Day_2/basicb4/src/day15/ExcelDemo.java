@@ -1,8 +1,10 @@
 package day15;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -16,6 +18,7 @@ public class ExcelDemo {
 	
 	public static void main(String args[]) throws IOException {
 		
+		/*
 		XSSFWorkbook workbook = new XSSFWorkbook();
 		  
         XSSFSheet sheet = workbook.createSheet("some people");
@@ -24,7 +27,7 @@ public class ExcelDemo {
         data.put("1", new Object[]{ "ID", "NAME", "LASTNAME" });
         data.put("2", new Object[]{ 1, "Umesh", "Moorthy" });
         data.put("3", new Object[]{ 2, "Surya", "Dev" });
-        data.put("4", new Object[]{ 3, "Chandra Dev", "Dev" });
+        data.put("4", new Object[]{ 3, "Chandra Dev" });
         data.put("5", new Object[]{ 4, "Virat", "kohli" });
   
         Set<String> keyset = data.keySet();
@@ -39,10 +42,13 @@ public class ExcelDemo {
             for (Object obj : objArr) {
                 
                 Cell cell = row.createCell(cellnum++);
-                if (obj instanceof String)
+                
+                if (obj instanceof String) {
                     cell.setCellValue((String)obj);
-                else if (obj instanceof Integer)
+                }else if (obj instanceof Integer) {
                     cell.setCellValue((Integer)obj);
+                }
+                
             }
             
         }
@@ -59,6 +65,51 @@ public class ExcelDemo {
         	if(workbook!=null) {
         		workbook.close();
         	}
+        }
+        */
+        try {
+        	
+            FileInputStream file = new FileInputStream(new File("test.xlsx"));
+  
+            XSSFWorkbook workbook2 = new XSSFWorkbook(file);
+
+            XSSFSheet sheet2 = workbook2.getSheetAt(0);
+  
+            Iterator<Row> rowIterator = sheet2.iterator();
+            
+            while (rowIterator.hasNext()) {
+            	
+                Row row = rowIterator.next();
+
+                Iterator<Cell> cellIterator = row.cellIterator();
+  
+                while (cellIterator.hasNext()) {
+                	
+                    Cell cell = cellIterator.next();
+ 
+                    //System.out.println(cell.getCellType().toString());
+                    
+                    switch (cell.getCellType().toString()) {
+                    
+                    case "NUMERIC":
+                        System.out.print(cell.getNumericCellValue() + " ");
+                        break;
+                    case "STRING":
+                        System.out.print(cell.getStringCellValue() + " ");
+                        break;
+                    }
+                    
+                }
+                
+                System.out.println("");
+            }
+            
+            file.close();
+            
+        }catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+
         }
         
     }
