@@ -1,7 +1,9 @@
 package day7;
 
 public class CommandDemo {
+	
 	public static void main(String[] args) {
+		
 		Tv tv=new Tv();
 		SetTopBox setTopBox=new SetTopBox();
 		VGame vGame=new VGame();
@@ -21,8 +23,11 @@ public class CommandDemo {
 		
 	}
 }
+
 class UniversalRemote{
+	
 	Command c[]=new Command[5];
+	
 	public UniversalRemote() {
 		for(int i=0;i<5;i++) {
 			c[i]=new DummyCommand();
@@ -36,16 +41,20 @@ class UniversalRemote{
 		this.c[slot].execute();
 	}
 }
+
 class DummyCommand extends Command{
 	@Override
 	public void execute() {
 		System.out.println("I am dummy yet to be operational...");
 	}
 }
+
 abstract class Command{
+	
 	public Command() {
 		// TODO Auto-generated constructor stub
 	}
+	
 	private Tv tv;private SetTopBox setTopBox;private VGame vGame;private SoundSystem soundSystem;
 	
 	public Command(Tv tv, SetTopBox setTopBox, VGame vGame, SoundSystem soundSystem) {
@@ -68,7 +77,9 @@ abstract class Command{
 	}
 	public abstract void execute();
 }
+
 class FatherNewsChannelCommand extends Command{
+	
 	public FatherNewsChannelCommand(Tv tv, SetTopBox setTopBox, VGame vGame, SoundSystem soundSystem) {
 		super(tv,setTopBox,vGame,soundSystem);
 	}
@@ -79,18 +90,25 @@ class FatherNewsChannelCommand extends Command{
 		getTv().tvOn();getTv().av1Mode();getSetTopBox().newsChannel();getSoundSystem().highSound();
 		System.out.println("Enjoy the news pappa.....");
 	}
+	
 }
+
 class MotherSerialChannelCommand extends Command{
+	
 	public MotherSerialChannelCommand(Tv tv, SetTopBox setTopBox, VGame vGame, SoundSystem soundSystem) {
 		super(tv,setTopBox,vGame,soundSystem);
 	}
+	
 	public void execute() {
 		System.out.println("logic of Mother news channel command started.............");
 		getTv().tvOn();getTv().av1Mode();getSetTopBox().serialChannel();getSoundSystem().lowSound();
 		System.out.println("Enjoy the serial channel mamma");
 	}
+	
 }
+
 class FatherVGameCommand extends Command{
+	
 	public FatherVGameCommand(Tv tv, SetTopBox setTopBox, VGame vGame, SoundSystem soundSystem) {
 		super(tv,setTopBox,vGame,soundSystem);
 	}
@@ -99,8 +117,11 @@ class FatherVGameCommand extends Command{
 		getTv().tvOn();getTv().vgameMode();getSoundSystem().highSound();
 		System.out.println("Enjoy the tennis game pappa...........");
 	}
+	
 }
+
 class Tv{
+	
 	public void tvOn() {
 		System.out.println("tv on..........");
 	}
@@ -111,7 +132,9 @@ class Tv{
 		System.out.println("v game mode.............");
 	}
 }
+
 class SetTopBox{
+	
 	public void newsChannel() {
 		System.out.println("news channel started.....");
 	}
@@ -119,7 +142,9 @@ class SetTopBox{
 		System.out.println("serial channel started........");
 	}
 }
+
 class SoundSystem{
+	
 	public void highSound() {
 		System.out.println("high volume.......");
 	}
@@ -127,10 +152,13 @@ class SoundSystem{
 		System.out.println("low volume.......");
 	}
 }
+
 class VGame{
+	
 	public void playTennis() {
 		System.out.println("vgame tennis started....");
 	}
+	
 }
 
 
