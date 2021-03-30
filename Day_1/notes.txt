@@ -42,3 +42,9 @@ No of hrs working per day
 holiday -list will come in enum (night 12 to 12 - 24 hrs)
 sunday,jan1, jan26,aug 15,oct2
 Calculate the date and time of delivery
+
+https://stackoverflow.com/questions/55083793/in-an-enum-class-how-can-one-cast-values-as-dates
+
+Multi thread server
+Email
+Sms
