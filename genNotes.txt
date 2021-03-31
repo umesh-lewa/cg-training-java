@@ -1,1 +1,9 @@
 https://www.faceprep.in/c/program-to-find-the-minimum-and-maximum-element-in-each-row-of-matrix/
+
+https://www.geeksforgeeks.org/reading-writing-data-excel-file-using-apache-poi/
+
+https://www.geeksforgeeks.org/multithreaded-servers-in-java/
+
+https://www.twilio.com/docs/sms/quickstart/java?code-sample=code-send-an-sms-using-twilio-with-java&code-language=Java&code-sdk-version=8.x
+
+https://stackoverflow.com/questions/39067373/jdbc-and-multithreading
