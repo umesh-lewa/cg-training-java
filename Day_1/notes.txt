@@ -48,3 +48,11 @@ https://stackoverflow.com/questions/55083793/in-an-enum-class-how-can-one-cast-v
 Multi thread server
 Email
 Sms
+
+Input from xml 
+Pdf gen
+Excel gen
+Email gen
+Sms gen
+
+https://dev.mysql.com/downloads/mysql/
