@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Day_2/basicb4/src"/>
+	<classpathentry kind="src" path="Day_2/corejavatest1/src"/>
+	<classpathentry kind="src" path="Day_3/BasicsLabBook/src"/>
+	<classpathentry kind="src" path="Day_4/FridayFunJavaLab/src"/>
+	<classpathentry kind="src" path="Day_9/InheritanceExceptionLabBook/src"/>
+	<classpathentry kind="lib" path="Day_1/temp/myjar.jar"/>
+	<classpathentry kind="output" path="Day_2/corejavatest1/bin"/>
+</classpath>
