@@ -32,5 +32,6 @@
 	<classpathentry kind="lib" path="lib/xmlsec-2.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/twilio-8.9.0-jar-with-dependencies.jar"/>
 	<classpathentry kind="lib" path="lib/javax.mail.jar"/>
+	<classpathentry kind="lib" path="lib/aspose-cells-7.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
