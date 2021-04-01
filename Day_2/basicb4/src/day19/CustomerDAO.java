@@ -4,11 +4,11 @@ import java.util.List;
 
 public interface CustomerDAO {
 	
-	public List<CustomerDAO> findAll();
-	public CustomerDAO findByID(Integer customerid);	
-	public int insertItem(CustomerDAO customerDAO);
-	public int updateItem(CustomerDAO customerDAO);
+	public List<CustomerDTO> findAll();
+	public CustomerDTO findByID(Integer customerid);	
+	public int insertItem(CustomerDTO customerDTO);
+	public int updateItem(CustomerDTO customerDTO);
 	public int deleteItemByID(Integer customerid);
-	public int deleteItemByDTO(CustomerDAO cutomerDAO);
+	public int deleteItemByDTO(CustomerDTO cutomerDTO);
 	
 }

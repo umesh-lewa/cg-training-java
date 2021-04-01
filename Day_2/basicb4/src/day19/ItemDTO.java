@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class ItemDTO implements Serializable,Cloneable{
 	
 	private int itemid;
+	private String itemdesc;
 	private String item_name;
 	private String item_unit;
 	private float price;
@@ -33,10 +34,6 @@ public class ItemDTO implements Serializable,Cloneable{
 		
 	}
 	
-	private ItemDTO() {
-		// TODO Auto-generated constructor stub
-	}
-	
 	
 	@Override
 	public String toString() {
@@ -49,6 +46,12 @@ public class ItemDTO implements Serializable,Cloneable{
 	}
 	public final void setItemid(int itemid) {
 		this.itemid = itemid;
+	}
+	public final String getiItemdesc() {
+		return itemdesc;
+	}
+	public final void setItemdesc(String itemdesc) {
+		this.itemdesc = itemdesc;
 	}
 	public final String getItem_name() {
 		return item_name;

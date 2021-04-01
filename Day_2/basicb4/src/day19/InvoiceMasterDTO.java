@@ -13,7 +13,7 @@ public class InvoiceMasterDTO implements Serializable,Cloneable{
 	
 	private int invid;
 	private String invdate;
-	private String customerid;
+	private int customerid;
 	
 	public InvoiceMasterDTO getInvoiceMasterDTO() {
 		
@@ -52,10 +52,10 @@ public class InvoiceMasterDTO implements Serializable,Cloneable{
 	public void setInvdate(String invdate) {
 		this.invdate = invdate;
 	}
-	public String getCustomerid() {
+	public int getCustomerid() {
 		return customerid;
 	}
-	public void setCustomerid(String customerid) {
+	public void setCustomerid(int customerid) {
 		this.customerid = customerid;
 	}
 	

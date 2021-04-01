@@ -4,11 +4,11 @@ import java.util.List;
 
 public interface InvoiceMasterDAO {
 	
-	public List<InvoiceMasterDAO> findAll();
-	public InvoiceMasterDAO findByID(Integer invid);	
-	public int insertItem(InvoiceMasterDAO invoiceMasterDao);
-	public int updateItem(InvoiceMasterDAO invoiceMasterDao);
+	public List<InvoiceMasterDTO> findAll();
+	public InvoiceMasterDTO findByID(Integer invid);	
+	public int insertItem(InvoiceMasterDTO invoiceMasterDto);
+	public int updateItem(InvoiceMasterDTO invoiceMasterDto);
 	public int deleteItemByID(Integer invid);
-	public int deleteItemByDTO(InvoiceMasterDAO invoiceMasterDao);
+	public int deleteItemByDTO(InvoiceMasterDTO invoiceMasterDto);
 	
 }

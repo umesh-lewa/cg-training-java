@@ -4,12 +4,12 @@ import java.util.List;
 
 public interface UserDAO {
 	
-	public UserDAO findByID(Integer userid);
-	public List<UserDAO> findAll();
-	public int insertItem(UserDAO userDAO);
-	public int updateItem(UserDAO userDAO);
+	public UserDTO findByID(Integer userid);
+	public List<UserDTO> findAll();
+	public int insertItem(UserDTO userDTO);
+	public int updateItem(UserDTO userDTO);
 	public int deleteItemByID(Integer userid);
-	public int deleteItemByDTO(UserDAO userDAO);
+	public int deleteItemByDTO(UserDTO userDTO);
 	
 }
 
