@@ -3,16 +3,13 @@ package day18;
 import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Savepoint;
 import java.util.Properties;
-
 public class DBUtility {
-	
 	private DBUtility() {
 		// TODO Auto-generated constructor stub
 	}
-	
 	private static String url,username,password;
-	
 	static {
 		try {
 			Properties prop=new Properties();
@@ -29,12 +26,12 @@ public class DBUtility {
 	
 	private static ThreadLocal<Connection> tlocal=new ThreadLocal<>();
 	private static Connection con;
-	
 	synchronized public static Connection getConnection() {
 		con=tlocal.get();
 		if(con==null) {
 			try {
 				con=DriverManager.getConnection(url,username,password);
+				con.setAutoCommit(false);
 				tlocal.set(con);
 			}catch(Exception e) {
 				e.printStackTrace();
@@ -42,15 +39,38 @@ public class DBUtility {
 		}
 		return con;
 	}
-	
 	synchronized public static void closeConnection() {
 		con=tlocal.get();
 		if(con!=null) {
 			try {
+
 			con.close();
 			tlocal.remove();
-			}catch(Exception e) {
-				e.printStackTrace();
+			}catch(Exception ee) {
+				ee.printStackTrace();
+			}
+		}
+	}
+	synchronized public static void closeConnection(Exception e,Savepoint sp) {
+		con=tlocal.get();
+		if(con!=null) {
+			try {
+				if(e==null) {
+					con.commit();//manual commit
+				}
+				else {
+					if(sp==null) {
+						con.rollback();
+					}
+					else {
+						con.rollback(sp);
+						con.commit();
+					}
+				}
+			con.close();
+			tlocal.remove();
+			}catch(Exception ee) {
+				ee.printStackTrace();
 			}
 		}
 	}
