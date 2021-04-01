@@ -1,0 +1,48 @@
+<invoice>
+
+	<invoiceitem>
+		<description>
+			Table
+		</description>
+		<quantity>
+			4
+		</quantity>
+		<unitprice>
+			250
+		</unitprice>
+		<total>
+			1000
+		</total>
+	</invoiceitem>
+	
+	<invoiceitem>
+		<description>
+			Chair
+		</description>
+		<quantity>
+			3
+		</quantity>
+		<unitprice>
+			100
+		</unitprice>
+		<total>
+			300
+		</total>
+	</invoiceitem>
+	
+	<invoiceitem>
+		<description>
+			Lamp
+		</description>
+		<quantity>
+			6
+		</quantity>
+		<unitprice>
+			50
+		</unitprice>
+		<total>
+			300
+		</total>
+	</invoiceitem>
+
+</invoice>
