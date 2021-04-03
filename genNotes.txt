@@ -7,3 +7,7 @@ https://www.geeksforgeeks.org/multithreaded-servers-in-java/
 https://www.twilio.com/docs/sms/quickstart/java?code-sample=code-send-an-sms-using-twilio-with-java&code-language=Java&code-sdk-version=8.x
 
 https://stackoverflow.com/questions/39067373/jdbc-and-multithreading
+
+https://stackoverflow.com/questions/20386201/java-sql-sqlexception-no-suitable-driver-heroku
+
+https://blog.aspose.com/2020/08/12/convert-excel-to-pdf-using-java/
