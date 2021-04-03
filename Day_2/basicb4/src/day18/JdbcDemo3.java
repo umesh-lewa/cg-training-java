@@ -2,8 +2,11 @@ package day18;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
+
 public class JdbcDemo3 {
+	
 	public static void main(String[] args) throws Exception{
+		
 		Connection con=DBUtility.getConnection();
 		con.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
 		DatabaseMetaData dmd= con.getMetaData();//to capture the database
