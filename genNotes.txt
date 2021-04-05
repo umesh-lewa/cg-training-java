@@ -11,3 +11,9 @@ https://stackoverflow.com/questions/39067373/jdbc-and-multithreading
 https://stackoverflow.com/questions/20386201/java-sql-sqlexception-no-suitable-driver-heroku
 
 https://blog.aspose.com/2020/08/12/convert-excel-to-pdf-using-java/
+
+https://www.javatpoint.com/how-to-install-apache-on-mac
+
+https://stackoverflow.com/questions/43559201/could-not-reliably-determine-the-servers-fully-qualified-domain-name-for-macboo
+
+https://stackoverflow.com/questions/30098438/what-is-the-need-of-servlet-jar-in-eclipseide-when-we-create-a-servlet-in-dynami#:~:text=3%20Answers&text=You%20need%20Servlet%2Dapi.,WEB%2DINF%2FLIB%20folder.
