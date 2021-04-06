@@ -17,3 +17,7 @@ https://www.javatpoint.com/how-to-install-apache-on-mac
 https://stackoverflow.com/questions/43559201/could-not-reliably-determine-the-servers-fully-qualified-domain-name-for-macboo
 
 https://stackoverflow.com/questions/30098438/what-is-the-need-of-servlet-jar-in-eclipseide-when-we-create-a-servlet-in-dynami#:~:text=3%20Answers&text=You%20need%20Servlet%2Dapi.,WEB%2DINF%2FLIB%20folder.
+
+https://tomcat.apache.org/download-90.cgi
+
+https://stackoverflow.com/questions/3855127/find-and-kill-process-locking-port-3000-on-mac
