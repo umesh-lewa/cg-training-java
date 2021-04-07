@@ -21,3 +21,5 @@ https://stackoverflow.com/questions/30098438/what-is-the-need-of-servlet-jar-in-
 https://tomcat.apache.org/download-90.cgi
 
 https://stackoverflow.com/questions/3855127/find-and-kill-process-locking-port-3000-on-mac
+
+https://stackoverflow.com/questions/17484764/java-lang-classnotfoundexception-com-mysql-jdbc-driver-in-eclipse
