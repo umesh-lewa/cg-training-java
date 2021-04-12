@@ -51,7 +51,7 @@ public class InvoiceGenerator {
 		this.invoiceItems=invoiceItems;
 	}
 	
-	public void generateInvoice(){
+	public void generateInvoice(String useremail,String userphone){
 		
 		InvoiceDetails ivd = new InvoiceDetails.InvoiceDetailsBuilder("","","")
 				.setBILL_TO_CLIENT_COMPANY_NAME("")
@@ -152,7 +152,7 @@ public class InvoiceGenerator {
             long serialized_id = serializeJavaObjectToDB(this.ctx, invid, date.toString(), new File("Invoice.pdf"));            
             System.out.println("serialized_id : "+serialized_id);
             
-          	//String sid = sms.sendSMS("+919500130553", "Invoice ID + "+invid+"Invoice Total : "+invoiceTotal+"Invoice Date : "+date.toString(), this.ctx);
+          	//String sid = sms.sendSMS("+91"+userphone, "Invoice ID + "+invid+"Invoice Total : "+invoiceTotal+"Invoice Date : "+date.toString(), this.ctx);
           	//System.out.println("SMS sid : "+sid);
           	
           	String emailacc="";
@@ -168,7 +168,7 @@ public class InvoiceGenerator {
     		}
           	
           	EmailUtil email = new EmailUtil();
-          	email.generateAndSendEmail("smtp.gmail.com", "587", emailacc, emailpass, "Invoice Generated", "Invoice ID + "+invid+"Invoice Total : "+invoiceTotal+"Invoice Date : "+date.toString(),"umesh.lewa@yahoo.com");
+          	//email.generateAndSendEmail("smtp.gmail.com", "587", emailacc, emailpass, "Invoice Generated", "Invoice ID + "+invid+"Invoice Total : "+invoiceTotal+"Invoice Date : "+date.toString(),useremail);
           	
           	File objFromDatabase = (File) deSerializeJavaObjectFromDB(this.ctx, invid);
           	System.out.println("Deserialized obj from DB : "+objFromDatabase.getName());
