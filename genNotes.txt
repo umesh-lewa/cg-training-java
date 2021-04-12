@@ -29,3 +29,8 @@ https://www.javatpoint.com/example-of-sending-attachment-with-email-using-java-m
 https://stackoverflow.com/questions/38276650/preparedstatement-execute-doesnt-affect-the-database
 
 https://javapapers.com/core-java/serialize-de-serialize-java-object-from-database/
+
+https://stackoverflow.com/questions/40719102/when-button-clicked-download-jsp-table-in-the-form-of-pdf
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
