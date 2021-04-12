@@ -37,6 +37,8 @@ public class ActionServlet extends HttpServlet {
 		application.setAttribute("configProp", configProp);
 		application.setAttribute("dbConfigProp", dbConfigProp);
 		
+		application.setAttribute("dbconfigpath", dbconfigpath);
+		
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
