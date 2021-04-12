@@ -22,6 +22,10 @@
 		Daal:<input type="checkbox" name="c8" value="daal">
 		Oil:<input type="checkbox" name="c9" value="oil">
 		 -->
+		 <br>
+		 
+		 Enter your email :<input type="text" name="useremail">
+		 Enter your phone :<input type="text" name="userphone">
 		 
 		<input type="submit" value="Generate Invoice..">
 	</form>
