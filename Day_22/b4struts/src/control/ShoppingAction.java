@@ -30,7 +30,7 @@ public String execute(HttpServletRequest request, HttpServletResponse response) 
 		System.out.println("Setting values in session....!!!");
 		String name=e.nextElement();
 		String value=request.getParameter(name);
-		if(name.equals("formid")||name.equals("shopid")) {
+		if(name.equals("formid")||name.equals("shopid")||name.equals("useremail")||name.equals("userphone")) {
 			
 		}else {
 			if(name.equals("15")) {
@@ -46,12 +46,19 @@ public String execute(HttpServletRequest request, HttpServletResponse response) 
 	
 	if(shopid.equals("shop3")) {
 		
+		String useremail = request.getParameter("useremail");
+		String userphone = request.getParameter("userphone");
+		
+		System.out.println("useremail : "+useremail);
+		System.out.println("userphone : "+userphone);
+		
 		Set<InvoiceItem> invoiceItems = new HashSet<InvoiceItem>();
 		
 		int total = 0;
 		
 		Enumeration<String> enu=session.getAttributeNames();
 		System.out.println("Values from Session....!!!");
+		
 		while(enu.hasMoreElements()) {
 			String name=enu.nextElement();
 			String value=request.getParameter(name);
@@ -90,7 +97,7 @@ public String execute(HttpServletRequest request, HttpServletResponse response) 
 		invoiceGenerator.setInvoiceItems(invoiceItems);
 		invoiceGenerator.setServCtx(ctx);
 		
-		invoiceGenerator.generateInvoice();
+		invoiceGenerator.generateInvoice(useremail,userphone);
 	}
 	
 	return shopid;
