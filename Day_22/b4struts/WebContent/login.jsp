@@ -16,8 +16,8 @@
 		
 		<input type="hidden" name="formid" value="login">
 		
-		<%=rb.getString("username") %>:<input type="text" name="uname">
-		<%=rb.getString("password") %>:<input type="password" name="upass">
+		<%=rb.getString("username") %>:<input type="text" name="uname" placeholder="somu">
+		<%=rb.getString("password") %>:<input type="password" name="upass" placeholder="123">
 		
 		<!-- 
 		UserName:<input type="text" name="uname">
