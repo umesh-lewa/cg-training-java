@@ -32,6 +32,7 @@ public class LoginServiceImpl implements LoginService,Cloneable{
 		}
 	}
 	private UserDAO userDAO;
+	
 	public LoginServiceImpl(UserDAO userDAO) {
 		this.userDAO=userDAO;
 	}
@@ -61,6 +62,7 @@ public class LoginServiceImpl implements LoginService,Cloneable{
 		if(userDTO!=null) {
 			if(userDTO.getFlag()==0) {
 				return true;
+				//this.userDAO=userDTO;
 			}
 		}
 		return false;

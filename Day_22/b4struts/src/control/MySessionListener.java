@@ -35,6 +35,8 @@ public class MySessionListener implements HttpSessionListener {
          // TODO Auto-generated method stub
     	
     	System.out.println("session destroyed...");
+    	
+    	System.out.println("Resetting login flag....!!!");
     	HttpSession session=se.getSession();
     	Object name=session.getAttribute("uname");
     	if(name!=null) {

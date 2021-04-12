@@ -12,22 +12,22 @@ public class RequestProcessor {
 			
 			System.out.println("Inside RequestProcessor....!!!");
 			
-		Properties configProp=(Properties)request.getServletContext().getAttribute("configProp");
-		
-		String formid=request.getParameter("formid");
-		String actionClass=configProp.getProperty(formid);
-		
-		Action action=(Action)Class.forName(actionClass).getConstructor().newInstance();
-		String result=action.execute(request, response);
-		
-		String nextPage=configProp.getProperty(result);
-		
-		RequestDispatcher rd=request.getRequestDispatcher(nextPage);
-		
-		System.out.println("Redirecting to next page....!!!");
-		rd.forward(request, response);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+			Properties configProp=(Properties)request.getServletContext().getAttribute("configProp");
+			
+			String formid=request.getParameter("formid");
+			String actionClass=configProp.getProperty(formid);
+			
+			Action action=(Action)Class.forName(actionClass).getConstructor().newInstance();
+			String result=action.execute(request, response);
+			
+			String nextPage=configProp.getProperty(result);
+			
+			RequestDispatcher rd=request.getRequestDispatcher(nextPage);
+			
+			System.out.println("Redirecting to next page....!!!");
+			rd.forward(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 	}
 }
