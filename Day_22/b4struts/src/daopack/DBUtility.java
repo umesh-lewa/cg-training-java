@@ -14,10 +14,18 @@ public class DBUtility {
 	}
 	private static String url,username,password;
 	private static ServletContext ctx;
+	
 	static {
+		
+	}
+
+	private static void getProps(ServletContext context) {
+		
 		try {
 			Properties prop=new Properties();
-			prop.load(new FileInputStream(ctx.getAttribute("dbconfigpath").toString()));
+			//Properties prop= (Properties)context.getAttribute("dbconfigpath");
+			//prop.load(new FileInputStream(context.getAttribute("dbconfigpath").toString()));
+			prop.load(new FileInputStream(context.getAttribute("dbconfigpath").toString()));
 			String driver=prop.getProperty("driver");
 			url=prop.getProperty("url");
 			username=prop.getProperty("username");
@@ -26,13 +34,16 @@ public class DBUtility {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+		
 	}
 	
 	private static ThreadLocal<Connection> tlocal=new ThreadLocal<>();
 	private static Connection con;
 	
 	synchronized public static Connection getConnection(ServletContext context) {
+		System.out.println("Within get connection context is " + context);
 		ctx=context;
+		getProps(context);
 		con=tlocal.get();
 		if(con==null) {
 			try {
