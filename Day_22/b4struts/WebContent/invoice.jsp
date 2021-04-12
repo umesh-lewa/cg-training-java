@@ -17,8 +17,6 @@
 		String value=(String)session.getAttribute(name);
 		out.println(name+":"+value);
 	}
-
-
 %>
 </body>
 </html>
