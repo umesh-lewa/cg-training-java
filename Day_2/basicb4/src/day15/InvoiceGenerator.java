@@ -13,7 +13,79 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.aspose.cells.PdfCompliance;
+import com.aspose.cells.PdfSaveOptions;
+import com.aspose.cells.Workbook;
+
 public class InvoiceGenerator {
+	
+	private Set<InvoiceItem> invoiceItems = new HashSet<InvoiceItem>();
+	
+	public void setInvoiceItems(Set<InvoiceItem> invoiceItems){
+		this.invoiceItems=invoiceItems;
+	}
+	
+	public void generateInvoice(){
+		
+		InvoiceDetails ivd = new InvoiceDetails.InvoiceDetailsBuilder("","","")
+				.setBILL_TO_CLIENT_COMPANY_NAME("")
+				.setSHIP_TO_CLIENT_COMPANY_NAME("")
+				.build();
+		
+		XSSFWorkbook workbook = new XSSFWorkbook();
+		  
+        XSSFSheet sheet = workbook.createSheet("Invoice");
+		
+		Set<InvoiceItem> invoiceItems = this.invoiceItems;
+	
+		int rownum = 0;
+		
+        for(InvoiceItem invoiceItem : invoiceItems){
+        	
+        	   System.out.println(invoiceItem);
+        	   
+        	   Row row = sheet.createRow(rownum++);
+
+               Cell cell0 = row.createCell(0); 
+               cell0.setCellValue((String)invoiceItem.DESCRIPTION);
+               
+               Cell cell1 = row.createCell(1); 
+               cell1.setCellValue((String)invoiceItem.QUATITY);
+               
+               Cell cell2 = row.createCell(2); 
+               cell2.setCellValue((String)invoiceItem.UNIT_PRICE);
+               
+               Cell cell3 = row.createCell(3); 
+               cell3.setCellValue((String)invoiceItem.TOTAL);
+               
+        }
+        
+        try {
+
+            FileOutputStream out = new FileOutputStream(new File("Invoice.xlsx"));
+            workbook.write(out);
+            out.close();
+            
+            Workbook workbook1 = new Workbook("Invoice.xlsx");
+
+	        PdfSaveOptions options = new PdfSaveOptions();
+	        //options.setCompliance(PdfCompliance.PDF_A_1_A);
+	         
+	        workbook1.save("Invoice.pdf", options);
+          	
+        }catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+        	try {
+        		if(workbook!=null) {
+        			workbook.close();
+        		}
+        	}catch(Exception e) {
+        		e.printStackTrace();
+        	}
+        }
+        
+	}
 	
 	public static void main(String args[]) {
 		
@@ -23,21 +95,38 @@ public class InvoiceGenerator {
 				.setSHIP_TO_CLIENT_COMPANY_NAME("")
 				.build();
 		
-		
-		Set<InvoiceItem> invoiceItems = new HashSet<InvoiceItem>();
-		invoiceItems.add(new InvoiceItem("","","",""));
-		invoiceItems.add(new InvoiceItem("","","",""));
-		invoiceItems.add(new InvoiceItem("","","",""));
-		
 		XSSFWorkbook workbook = new XSSFWorkbook();
 		  
         XSSFSheet sheet = workbook.createSheet("Invoice");
-
-
+		
+		Set<InvoiceItem> invoiceItems = new HashSet<InvoiceItem>();
+		invoiceItems.add(new InvoiceItem("Table","4","250","1000"));
+		invoiceItems.add(new InvoiceItem("Chair","3","100","300"));
+		invoiceItems.add(new InvoiceItem("Lamp","6","50","300"));
+		
+		int rownum = 0;
+		
         for(InvoiceItem invoiceItem : invoiceItems){
+        	
         	   System.out.println(invoiceItem);
+        	   
+        	   Row row = sheet.createRow(rownum++);
+
+               Cell cell0 = row.createCell(0); 
+               cell0.setCellValue((String)invoiceItem.DESCRIPTION);
+               
+               Cell cell1 = row.createCell(1); 
+               cell1.setCellValue((String)invoiceItem.QUATITY);
+               
+               Cell cell2 = row.createCell(2); 
+               cell2.setCellValue((String)invoiceItem.UNIT_PRICE);
+               
+               Cell cell3 = row.createCell(3); 
+               cell3.setCellValue((String)invoiceItem.TOTAL);
+               
         }
      
+        /*
         Map<String, Object[]> data = new TreeMap<String, Object[]>();
         data.put("1", new Object[]{ "ID", "NAME", "LASTNAME" });
         data.put("2", new Object[]{ 1, "Umesh", "Moorthy" });
@@ -67,13 +156,21 @@ public class InvoiceGenerator {
             }
             
         }
+        */
         
         try {
 
             FileOutputStream out = new FileOutputStream(new File("Invoice.xlsx"));
             workbook.write(out);
             out.close();
-          
+            
+            Workbook workbook1 = new Workbook("Invoice.xlsx");
+
+	        PdfSaveOptions options = new PdfSaveOptions();
+	        //options.setCompliance(PdfCompliance.PDF_A_1_A);
+	         
+	        workbook1.save("Invoice.pdf", options);
+          	
         }catch (Exception e) {
             e.printStackTrace();
         }finally {
