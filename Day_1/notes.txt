@@ -106,3 +106,16 @@ invdate			itemid			itemdesc	customername			username
 customerid		qty				price		customeraddress			password																			customercellphone		flag
 											customeraccountdetails
 											customergstnumber
+
+change shop jdbc to jstl
+
+store invoice as object and able to query
+invid
+cusid
+
+invoice to pdf
+sms 
+invid
+cusnum
+total
+invdate
