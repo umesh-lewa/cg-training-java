@@ -32,5 +32,4 @@ https://javapapers.com/core-java/serialize-de-serialize-java-object-from-databas
 
 https://stackoverflow.com/questions/40719102/when-button-clicked-download-jsp-table-in-the-form-of-pdf
 
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+http://books.msspace.net/mirrorbooks/javaserverpages24hours/0672325977_ch12lev1sec6.html
