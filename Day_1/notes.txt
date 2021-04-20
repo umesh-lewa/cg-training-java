@@ -103,7 +103,7 @@ identify the primary key
 Invoice master  invoice trans   itemmaster  customer				user
 invid			invid			itemid		customerid				userid
 invdate			itemid			itemdesc	customername			username
-customerid		qty				price		customeraddress			password																			customercellphone		flag
+customerid		qty				price		customeraddress			password													    customercellphone		flag
 											customeraccountdetails
 											customergstnumber
 
