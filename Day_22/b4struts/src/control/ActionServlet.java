@@ -11,9 +11,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
+
 /**
  * Servlet implementation class ActionServlet
  */
+
+@WebServlet(value = "*.do", initParams = {
+		   @WebInitParam(name = "config", value = "/WEB-INF/config.properties"),
+		   @WebInitParam(name = "dbconfig", value = "/WEB-INF/dbconfig.properties")
+		},
+			loadOnStartup = 1
+		)
 public class ActionServlet extends HttpServlet {
 	
 	private RequestProcessor rp;
@@ -22,6 +32,7 @@ public class ActionServlet extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		try {
 		rp=new RequestProcessor();
+		
 		ServletContext application=config.getServletContext();
 		String configfile=config.getInitParameter("config");
 		String dbconfigfile=config.getInitParameter("dbconfig");
