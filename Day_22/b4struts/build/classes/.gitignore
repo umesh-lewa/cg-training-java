@@ -1,2 +1,4 @@
-/utils/
-/control/
+/hiber/
+/hibernate.cfg.xml
+/onetomany.hbm.xml
+/user.hbm.xml
