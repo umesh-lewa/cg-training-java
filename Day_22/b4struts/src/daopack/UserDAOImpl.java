@@ -7,8 +7,6 @@ import java.util.Set;
 
 import javax.servlet.ServletContext;
 
-
-
 public class UserDAOImpl implements UserDAO,Cloneable{
 
 	private ServletContext ctx;

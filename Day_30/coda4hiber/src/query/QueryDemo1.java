@@ -29,6 +29,7 @@ public class QueryDemo1 {
 			HibernateUtility.closeSession(e);
 		}
 	}
+	
 	public void query1() {
 		try {
 			Session session=HibernateUtility.getSession();

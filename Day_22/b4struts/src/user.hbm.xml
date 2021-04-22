@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+	
+    <class name="hiber.User" table="User">
+   
+        <id name="eid" type="java.lang.Integer">			
+			<generator class="hilo" />
+		</id>
+        <property name="ename" />
+        <property name="esal" />
+        
+      <set name="addresses" table ="ADDRESS" cascade="all" inverse="true" lazy="false">
+        <key column="EMPLOYEE_EID"/>
+        <one-to-many class="onetomany.Address"/>
+       </set> 
+     
+	</class>
+	
+	
+</hibernate-mapping>
