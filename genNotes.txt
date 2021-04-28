@@ -33,3 +33,5 @@ https://javapapers.com/core-java/serialize-de-serialize-java-object-from-databas
 https://stackoverflow.com/questions/40719102/when-button-clicked-download-jsp-table-in-the-form-of-pdf
 
 http://books.msspace.net/mirrorbooks/javaserverpages24hours/0672325977_ch12lev1sec6.html
+
+https://www.javawebtutor.com/articles/hibernate/hibernate_crud_example.php
