@@ -35,3 +35,7 @@ https://stackoverflow.com/questions/40719102/when-button-clicked-download-jsp-ta
 http://books.msspace.net/mirrorbooks/javaserverpages24hours/0672325977_ch12lev1sec6.html
 
 https://www.javawebtutor.com/articles/hibernate/hibernate_crud_example.php
+
+https://www.baeldung.com/spring-component-annotation
+
+https://stackoverflow.com/questions/51558319/spring-tool-suite-ide-not-highlighting-jsp-files
