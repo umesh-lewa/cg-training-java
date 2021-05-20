@@ -1,0 +1,81 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+
+			//object notation
+			var obj = new Object();
+			obj.name="ramu";
+			obj.getName=function(){
+				return this.name;
+			}
+
+			window.alert(obj.getName);
+
+			// literal notation
+			var human = {
+				name:"ramu2",
+				getName:function(){
+					return this.name;
+				}
+			}
+			alert(human.getName());
+
+			// factory notation
+			var human2 = function(name){
+				var h = new Object();
+				h.name=name;
+				h.getName=function(){
+					return this.name;
+				};
+				return h;
+			}
+
+			var hum2 = human2("ramu22");
+			alert(hum2.getName());
+
+			// function constructor
+			function Human(name){
+				this.name=name;
+				this.getName=function(){
+					return this.name;
+				}
+			}
+			var h = new Human("ramu33")
+			alert(h.getName());
+
+			// prototyping notation
+			function coda(name){
+				this.name=name;
+			}
+			Coda.prototype.getName=function(){
+				return this.name;
+			}
+
+			var c = new Coda("codaa");
+			alert(c.getName());
+
+
+			function shoeFactory(name){
+				this.name=name;
+			}
+
+			function bataShoeFactory(){
+				this.getName=function(){
+					return this.name;
+				}
+			}
+
+			BataShoeFactory.prototype=new ShoeFactory("Shoe Factory....");
+			BataShoeFactory.prototype.constructor=BataShoeFactory;
+
+			var bsf = new BataShoeFactory();
+
+			alert(bsf.constructor);
+			alert(bsf.getName())
+		</script>
+	</body>
+</html>
