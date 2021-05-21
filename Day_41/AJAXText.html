@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX Test</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var ajaxRequest = new XMLHttpRequest();
+
+		function getData(destination,datasource){
+			if(ajaxRequest){
+				alert(ajaxRequest);
+				ajaxRequest.open("GET",datasource);
+				ajaxRequest.onreadystatechange=function(){
+					if(ajaxRequest.readystate==4 && ajaxRequest.satus==200){
+						var d = ajaxRequest.responseText;
+						var output = document.getElementById(destination);
+						output.innerHTML=d;
+					}
+				}
+				ajaxRequest.send(null);
+			}
+		}
+
+		getData();
+	</script>
+
+</body>
+</html>
