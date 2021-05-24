@@ -39,3 +39,26 @@ https://www.javawebtutor.com/articles/hibernate/hibernate_crud_example.php
 https://www.baeldung.com/spring-component-annotation
 
 https://stackoverflow.com/questions/51558319/spring-tool-suite-ide-not-highlighting-jsp-files
+
+https://codepen.io/Mhmdhasan/pen/JbJzZv
+https://bootsnipp.com/snippets/2X0r
+
+https://xinghua24.github.io/SpringBoot/Spring-Boot-HttpSession/
+
+https://www.baeldung.com/spring-boot-jsp
+
+https://docs.aspose.com/cells/java/installation/
+https://stackoverflow.com/questions/8202008/required-maven-dependencies-for-apache-poi-to-work
+
+https://codereview.stackexchange.com/questions/118859/java-login-system-using-jsp-and-servlets
+
+https://blog.prototypr.io/50-best-free-bootstrap-form-templates-examples-in-2019-79e4501dd7c6
+
+http://websystique.com/spring-security/spring-security-4-logout-example/
+
+https://www.javaguides.net/2019/09/user-account-registration-and-login.html
+https://github.com/RameshMF/spring-boot-tutorial/tree/master/login-registration-springboot-hibernate-jsp-auth
+
+https://stackoverflow.com/questions/64940922/there-was-an-unexpected-error-type-forbidden-status-403-forbiden
+
+https://stackoverflow.com/questions/3445908/is-there-an-elegant-way-to-inject-a-spring-managed-bean-into-a-java-custom-simpl
