@@ -62,3 +62,14 @@ https://github.com/RameshMF/spring-boot-tutorial/tree/master/login-registration-
 https://stackoverflow.com/questions/64940922/there-was-an-unexpected-error-type-forbidden-status-403-forbiden
 
 https://stackoverflow.com/questions/3445908/is-there-an-elegant-way-to-inject-a-spring-managed-bean-into-a-java-custom-simpl
+
+https://www.edureka.co/community/68998/sslhandshakeexception-appropriate-protocol-inappropriate
+
+https://stackoverflow.com/questions/858980/file-to-byte-in-java
+https://stackoverflow.com/questions/20586865/document-not-saving-in-spring-jpa-document-manager-application
+
+https://www.javaguides.net/2019/09/user-account-registration-and-login.html
+https://www.jackrutorial.com/2018/04/spring-boot-user-registration-login.html
+https://www.codejava.net/frameworks/spring-boot/user-registration-and-login-tutorial
+
+24:Daal,30,100.0    25:Oil,250,150.0
