@@ -73,3 +73,20 @@ https://www.jackrutorial.com/2018/04/spring-boot-user-registration-login.html
 https://www.codejava.net/frameworks/spring-boot/user-registration-and-login-tutorial
 
 24:Daal,30,100.0    25:Oil,250,150.0
+
+https://www.w3schools.com/howto/howto_js_filter_table.asp
+
+https://stackoverflow.com/questions/44095789/string-cannot-be-cast-to-integer-session-attribute
+
+ppt
+
+intro team
+job of each member
+intro project
+use case
+dao service class diagram
+architecture diagram 
+person to answer questions
+
+https://github.com/vjakash/Coda-Training-JavaCode/tree/main/shopping-app
+
